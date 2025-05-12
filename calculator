@@ -1,0 +1,29 @@
+def calculator(num_1, num_2, op):
+    if op == '+':
+        result = num_1 + num_2
+        print("The Result is:", result)
+    elif op == '-':
+        result = num_1 - num_2
+        print("The Result is:", result)
+    elif op == '*':
+        result = num_1 * num_2
+        print("The Result is:", result)
+    elif op == '/':
+        if num_2 != 0:
+            result = num_1 / num_2
+            print("The Result is:", result)
+        else:
+            print("Cannot divide by zero!")
+    else:
+        print("Invalid Operator!")
+
+while True:
+    num_1 = float(input("Enter first number: "))
+    num_2 = float(input("Enter second number: "))
+    op = input("Enter an operator (+, -, *, /): ")
+    calculator(num_1, num_2, op)
+
+    # Optional: ask if user wants to continue
+    choice = input("Do you want to continue? (yes/no): ")
+    if choice.lower() != 'yes':
+        break
